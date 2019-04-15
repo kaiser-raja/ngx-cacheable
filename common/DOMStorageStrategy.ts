@@ -5,9 +5,6 @@ export class DOMStorageStrategy extends IStorageStrategy {
   private masterCacheKey: string = GlobalCacheConfig.globalCacheKey;
   constructor() {
     super();
-    if (typeof localStorage == 'undefined') {
-      throw new Error('Platform not supported.')
-    }
   }
 
   add(cachePair: ICachePair<any>, cacheKey: string) {

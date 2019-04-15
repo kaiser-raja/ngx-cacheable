@@ -17,9 +17,6 @@ var DOMStorageStrategy = /** @class */ (function (_super) {
     function DOMStorageStrategy() {
         var _this = _super.call(this) || this;
         _this.masterCacheKey = _1.GlobalCacheConfig.globalCacheKey;
-        if (typeof localStorage == 'undefined') {
-            throw new Error('Platform not supported.');
-        }
         return _this;
     }
     DOMStorageStrategy.prototype.add = function (cachePair, cacheKey) {
